@@ -2,7 +2,7 @@ import pandas as pd
 
 def cleaned_pop_2020_2029():
 
-    pop_20_29_df = pd.read_csv('population-2020-2029.csv')
+    pop_20_29_df = pd.read_csv('original_data/population-2020-2029.csv')
     
 
     # pop_20_29_df.info()
@@ -39,4 +39,4 @@ if __name__ == "__main__":
     # This code only runs when you run population20_29.py directly
     clean_df2 = cleaned_pop_2020_2029()
     print(clean_df2) 
-    clean_df2.to_csv('pop_2020_2029_cleanfile.csv', index=False)
+    clean_df2.to_csv('cleaned_data/pop_2020_2029_cleanfile.csv', index=False)

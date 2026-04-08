@@ -1,7 +1,7 @@
 import pandas as pd
 
 def cleaned_pop_2030_2040():
-    pop_30_40_df = pd.read_excel('population-2030-2040.xlsx',header=0)
+    pop_30_40_df = pd.read_excel('original_data/population-2030-2040.xlsx',header=0)
 
     # rename
     pop_30_40_df.rename(columns={'Time':'Year','PopMale':'Male','PopFemale':'Female'},inplace=True)
@@ -52,10 +52,9 @@ def cleaned_pop_2030_2040():
 
 
 
-cleaned_pop_2030_2040()
-
-
-#clean_pop_30_40.to_csv('pop_2030_2040_cleanfile.csv',index=False)
+if __name__ == "__main__":
+    clean_df3 = cleaned_pop_2030_2040()
+    clean_df3.to_csv('cleaned_data/pop_2030_2040_cleanfile.csv', index=False)
 
 
 
